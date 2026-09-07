@@ -1,4 +1,4 @@
-# ~~Elegant-Floorp~~ Dynamic Fox 
+# ~~Elegant-Floorp~~ Dynamic Water-Fox 
 feel free to open issue on any topic.
 This is a simple userChrome.css file to make Waterfox Browser elegant and more compact than the given compact mode.
 
