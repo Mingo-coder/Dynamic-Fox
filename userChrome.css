@@ -623,3 +623,51 @@ toolbar #new-tab-button:not([disabled="true"]):not([checked]):not([open]):not(:a
 #TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
   color: var(--firefoxcss-tab-speaker-icon-hover-color) !important;
 }
+
+/* Hide only "Manage containers" from the New Tab (+) context menu */
+#new-tab-button-popup > menuitem[command="Browser:OpenAboutContainers"] {
+  display: none !important;
+}
+
+/* Remove icon left of "New Tab" */
+#new-tab-button-popup > menuitem:first-child {
+  list-style-image: none !important;
+  background-image: none !important;
+  --menuitem-icon: none !important;
+}
+
+#new-tab-button-popup > menuitem:first-child image,
+#new-tab-button-popup > menuitem:first-child .menu-iconic-left,
+#new-tab-button-popup > menuitem:first-child .menu-iconic-icon {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force "New Tab" text to the left (or center) */
+#new-tab-button-popup > menuitem:first-child {
+  justify-content: left !important;   /* change to center if you prefer */
+  padding-inline-start: 12px !important;    /* adjust this number if needed */
+  margin-top: -1px !important;
+  margin-bottom: -3px !important;
+  padding-inline-end: 12px !important;
+  width: 120px !important;
+}
+
+#new-tab-button-popup > menuitem:first-child .menu-text,
+#new-tab-button-popup > menuitem:first-child .menu-iconic-text {
+  margin-inline-start: -14px !important;
+  margin-inline-end: 0 !important;
+  width: auto !important;
+  height: 16px !important;
+  text-align: start !important;
+}
+
+/* Remove the separator line under "New Tab" 
+#new-tab-button-popup > menuseparator:first-of-type {
+  display: none !important;
+}
+*/
